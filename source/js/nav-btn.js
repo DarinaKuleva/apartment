@@ -1,9 +1,5 @@
-var matchTablet = window.matchMedia("(min-width: 768px)");
-(function() {
-  if (matchTablet.matches)
-  {
-  var navMain = document.querySelector('.nav');
-  var navToggle = document.querySelector('.nav__toggle');
+var navMain = document.querySelector('.nav');
+var navToggle = document.querySelector('.nav__toggle');
 
   navMain.classList.remove('nav--nojs');
 
@@ -11,9 +7,10 @@ var matchTablet = window.matchMedia("(min-width: 768px)");
     if (navMain.classList.contains('nav--closed')) {
       navMain.classList.remove('nav--closed');
       navMain.classList.add('nav--opened');
-    } else {
+    }
+
+    else {
       navMain.classList.add('nav--closed');
       navMain.classList.remove('nav--opened');
     }
-  }
-  }});
+  });
